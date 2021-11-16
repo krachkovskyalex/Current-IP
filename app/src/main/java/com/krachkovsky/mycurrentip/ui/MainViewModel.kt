@@ -2,6 +2,7 @@ package com.krachkovsky.mycurrentip.ui
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import com.krachkovsky.mycurrentip.api.IPApiRequest
 import com.krachkovsky.mycurrentip.api.Source
 import com.krachkovsky.mycurrentip.util.Constants
@@ -29,7 +30,7 @@ class MainViewModel : ViewModel() {
             .build()
             .create(IPApiRequest::class.java)
 
-        GlobalScope.launch(Dispatchers.IO) {
+        viewModelScope.launch(Dispatchers.IO) {
             try {
                 val response = api.getIP().awaitResponse()
                 if (response.isSuccessful) {
