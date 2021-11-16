@@ -42,9 +42,7 @@ class MainViewModel : ViewModel() {
                 }
                 trouble.postValue(false)
             } catch (e: Exception) {
-                withContext(Dispatchers.Main) {
                     trouble.postValue(true)
-                }
             }
         }
     }
