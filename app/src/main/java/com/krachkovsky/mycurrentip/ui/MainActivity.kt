@@ -16,6 +16,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        get_ip_bnt.setOnClickListener {
+            mainViewModel.getIP()
+        }
+
         mainViewModel.resultData.observe(this, {
             ip_text.text = it.ip
         })
@@ -33,9 +37,5 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this, "Something went wrong...", Toast.LENGTH_SHORT).show()
             }
         })
-
-        get_ip_bnt.setOnClickListener {
-            mainViewModel.getIP()
-        }
     }
 }
