@@ -10,7 +10,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MyCurrentIP">
+        android:theme="@style/Theme.MyCurrentIP"
+        android:name=".MyCurrentIP">
         <activity
             android:name=".ui.MainActivity"
             android:exported="true">

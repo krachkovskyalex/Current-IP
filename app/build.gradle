@@ -60,4 +60,9 @@ dependencies {
     // Coroutine Lifecycle Scopes
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0"
     implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.4.0"
+
+    // Koin
+    implementation "io.insert-koin:koin-android:2.2.3"
+    implementation "io.insert-koin:koin-android-viewmodel:2.2.3"
+
 }
